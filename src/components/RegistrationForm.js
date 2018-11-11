@@ -17,6 +17,18 @@ class RegistationForm extends Component {
     this.submitHandler = this.submitHandler.bind(this);
   }
 
+  componentDidMount() {
+    if (this.props.user) {
+      this.props.history.push("/");
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.props.user) {
+      this.props.history.push("/");
+    }
+  }
+
   changeHandler(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
