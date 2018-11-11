@@ -18,4 +18,10 @@ export const fetchChannels = () => {
   };
 };
 
+export const resetChannels = () => {
+  return dispatch => {
+    dispatch({ type: actionTypes.RESET_CHANNELS });
+  };
+};
+
 export default fetchChannels;
