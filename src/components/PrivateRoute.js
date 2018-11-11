@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
-
+import { connect } from "react-redux";
 class PrivateRoute extends Component {
   render() {
     const { component: Component, user, ...rest } = this.props;
@@ -14,5 +14,11 @@ class PrivateRoute extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    user: state.auth.user,
+    errs: state.errors
+  };
+};
 
-export default PrivateRoute;
+export default connect(mapStateToProps)(PrivateRoute);
