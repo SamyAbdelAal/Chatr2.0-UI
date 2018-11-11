@@ -7862,6 +7862,18 @@ react-bootstrap@^0.32.4:
     uncontrollable "^5.0.0"
     warning "^3.0.0"
 
+react-chat-box@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-chat-box/-/react-chat-box-1.0.2.tgz#1f9062b2d8dc3c0751c480db0029e06b7aed68d3"
+  integrity sha512-a2PA33INcRYs3qR9/A9VcSfcwZsCDr8J9Tfmhtu2urzBPD83uNfkkmTN0ZqgET91/a7mGqAOQQvoPdayaqCuNQ==
+  dependencies:
+    react-chat-cloud "^1.0.4"
+
+react-chat-cloud@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-chat-cloud/-/react-chat-cloud-1.0.4.tgz#cb6b53d250b114380532758fd3e90e1acd1e6dba"
+  integrity sha512-+4CtLxGmCWJIjC8I1gX1nMwDIv6AbKVwn0kThuYXQMsCgCkfHJVaWbC79WKfeiJEt1aAcYEQ+3X8P98B+zPZQQ==
+
 react-dev-utils@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-6.1.1.tgz#a07e3e8923c4609d9f27e5af5207e3ca20724895"

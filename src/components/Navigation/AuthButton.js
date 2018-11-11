@@ -20,10 +20,8 @@ class AuthButton extends Component {
     if (user) {
       buttons = (
         <li className="nav-item">
-          <span className="nav-link">
-            <button className="nav-link" onClick={() => this.props.logout()}>
-              <FontAwesomeIcon icon={faSignOutAlt} /> Logout
-            </button>
+          <span className="nav-link" onClick={() => this.props.logout()}>
+            <FontAwesomeIcon icon={faSignOutAlt} /> Logout
           </span>
         </li>
       );

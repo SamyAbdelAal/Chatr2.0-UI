@@ -15,7 +15,7 @@ import Channels from "./components/Channels";
 
 class App extends Component {
   componentDidMount() {
-    // this.props.checkForExpiredToken();
+    this.props.fetchChannels();
   }
   render() {
     return (
@@ -23,6 +23,7 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route path="/welcome" component={Welcome} />
+          <Route path="/channels/:channelID" component={Channels} />
           <Route path="/channels" component={Channels} />
           <Route path="/(login|signup)" component={RegistrationForm} />
           <PrivateRoute path="/private" component={SuperSecretPage} />
@@ -35,7 +36,8 @@ class App extends Component {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    checkForExpiredToken: () => dispatch(actionCreators.checkForExpiredToken())
+    fetchChannelMessages: () => dispatch(actionCreators.fetchChannelMessages()),
+    fetchChannels: () => dispatch(actionCreators.fetchChannels())
   };
 };
 
