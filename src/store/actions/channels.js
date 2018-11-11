@@ -18,6 +18,21 @@ export const fetchChannels = () => {
   };
 };
 
+export const postChannel = newChannel => {
+  return dispatch => {
+    instance
+      .post("/channels/create/", newChannel)
+      .then(res => res.data)
+      .then(createdChannel =>
+        dispatch({
+          type: actionTypes.POST_CHANNEL,
+          payload: createdChannel
+        })
+      )
+      .catch(error => console.error(error.response.data));
+  };
+};
+
 export const resetChannels = () => {
   return dispatch => {
     dispatch({ type: actionTypes.RESET_CHANNELS });
