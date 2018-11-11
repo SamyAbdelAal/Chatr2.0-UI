@@ -3,6 +3,7 @@ import { SET_ERRORS } from "../actions/actionTypes";
 const initialState = {};
 
 const reducer = (state = initialState, action) => {
+  console.log(action.payload);
   switch (action.type) {
     case SET_ERRORS:
       return {
