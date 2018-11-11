@@ -56,6 +56,16 @@ class RegistationForm extends Component {
                 required
                 onChange={this.changeHandler}
               />
+              {this.props.errs.username && (
+                <div className="alert alert-danger">
+                  {this.props.errs.username}
+                </div>
+              )}
+              {this.props.errs.non_field_errors && (
+                <div className="alert alert-danger">
+                  {this.props.errs.non_field_errors}
+                </div>
+              )}
             </div>
             <div className="form-group">
               <input
@@ -66,6 +76,16 @@ class RegistationForm extends Component {
                 required
                 onChange={this.changeHandler}
               />
+              {this.props.errs.password && (
+                <div className="alert alert-danger">
+                  {this.props.errs.password}
+                </div>
+              )}
+              {this.props.errs.non_field_errors && (
+                <div className="alert alert-danger">
+                  {this.props.errs.non_field_errors}
+                </div>
+              )}
             </div>
             <input
               className="btn btn-primary"
@@ -98,7 +118,8 @@ const mapDispatchToProps = dispatch => ({
 });
 const mapStateToProps = state => {
   return {
-    user: state.auth.user
+    user: state.auth.user,
+    errs: state.errors
   };
 };
 
