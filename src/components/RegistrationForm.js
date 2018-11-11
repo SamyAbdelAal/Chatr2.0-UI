@@ -57,12 +57,12 @@ class RegistationForm extends Component {
                 onChange={this.changeHandler}
               />
               {this.props.errs.username && (
-                <div className="invalid-feedback">
+                <div className="alert alert-danger">
                   {this.props.errs.username}
                 </div>
               )}
               {this.props.errs.non_field_errors && (
-                <div className="invalid-feedback">
+                <div className="alert alert-danger">
                   {this.props.errs.non_field_errors}
                 </div>
               )}
@@ -77,12 +77,12 @@ class RegistationForm extends Component {
                 onChange={this.changeHandler}
               />
               {this.props.errs.password && (
-                <div className="invalid-feedback">
+                <div className="alert alert-danger">
                   {this.props.errs.password}
                 </div>
               )}
               {this.props.errs.non_field_errors && (
-                <div className="invalid-feedback">
+                <div className="alert alert-danger">
                   {this.props.errs.non_field_errors}
                 </div>
               )}
