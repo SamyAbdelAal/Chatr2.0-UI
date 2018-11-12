@@ -52,7 +52,7 @@ export const login = (userData, history) => {
         const decodedUser = jwt_decode(user.token);
         setAuthToken(user.token);
         dispatch(setCurrentUser(decodedUser));
-        history.goBack();
+        history.push("/channels/");
       })
       .catch(err => dispatch(setErrors(err.response.data)));
   };
@@ -67,7 +67,7 @@ export const signup = (userData, history) => {
         const decodedUser = jwt_decode(user.token);
         setAuthToken(user.token);
         dispatch(setCurrentUser(decodedUser));
-        history.goBack();
+        history.push("/channels/");
       })
       .catch(err => dispatch(setErrors(err.response.data)));
   };

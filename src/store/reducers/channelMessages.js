@@ -1,7 +1,8 @@
 import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
-  messages: []
+  messages: [],
+  filteredMessages: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -14,11 +15,16 @@ const reducer = (state = initialState, action) => {
     case actionTypes.POST_MESSSAGE:
       return {
         ...state,
-        messages: state.messages.concat({ message: action.payload })
+        messages: state.messages.concat(action.payload)
         // message: {
         //   ...state.message,
         //   message: action.payload
         // }
+      };
+    case actionTypes.FILTER_MESSAGES:
+      return {
+        ...state,
+        filteredMessages: action.payload
       };
     default:
       return state;

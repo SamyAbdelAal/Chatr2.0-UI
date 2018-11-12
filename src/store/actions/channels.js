@@ -18,6 +18,13 @@ export const fetchChannels = () => {
   };
 };
 
+export const fetchChannel = channelID => {
+  return {
+    type: actionTypes.FETCH_CHANNEL,
+    payload: channelID
+  };
+};
+
 export const postChannel = newChannel => {
   return dispatch => {
     instance
