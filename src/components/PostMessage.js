@@ -25,14 +25,16 @@ class PostMessage extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} className="form-group">
         <input
+          className="form-control"
           type="text"
           name="message"
           placeholder="Enter message here..."
           onChange={this.onTextChange}
+          value={this.state.message}
         />
-        <input type="submit" value="Add Message" />
+        <input type="submit" value="Add Message" className="btn btn-success" />
       </form>
     );
   }

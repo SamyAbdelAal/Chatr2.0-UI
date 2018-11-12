@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 // Fontawesome
@@ -20,13 +20,17 @@ class SideNav extends React.Component {
   }
 
   render() {
-    const channelLinks = [{ name: "all" }].map(channel => (
-      <ChannelNavLink key={channel.name} channel={channel} />
+    const channelLinks = this.props.channels.map(channel => (
+      <ChannelNavLink key={channel.id} channel={channel} />
     ));
     return (
       <div>
         {this.props.user && (
-          <ul className="navbar-nav navbar-sidenav" id="exampleAccordion">
+          <ul
+            className="navbar-nav navbar-sidenav"
+            id="exampleAccordion"
+            style={{ overflowY: "scroll" }}
+          >
             <li
               className="nav-item"
               data-toggle="tooltip"
@@ -67,4 +71,4 @@ const mapStateToProps = state => ({
   channels: state.channels.channels,
   user: state.auth.user
 });
-export default connect(mapStateToProps)(SideNav);
+export default withRouter(connect(mapStateToProps)(SideNav));
