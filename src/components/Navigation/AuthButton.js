@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 // Actions
@@ -20,7 +20,13 @@ class AuthButton extends Component {
     if (user) {
       buttons = (
         <li className="nav-item">
-          <span className="nav-link" onClick={() => this.props.logout()}>
+          <span
+            className="nav-link"
+            onClick={() => {
+              this.props.logout();
+              return <Redirect to="/welcome" />;
+            }}
+          >
             <FontAwesomeIcon icon={faSignOutAlt} /> Logout
           </span>
         </li>

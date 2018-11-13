@@ -9,7 +9,7 @@ class NavBar extends Component {
   render() {
     return (
       <nav
-        className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+        className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav"
         id="mainNav"
       >
         <Link className="navbar-brand" to="/welcome">

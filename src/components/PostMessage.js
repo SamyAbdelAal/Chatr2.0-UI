@@ -21,6 +21,7 @@ class PostMessage extends Component {
   onSubmit(event) {
     event.preventDefault();
     this.props.postMessage(this.state, this.props.channelID);
+    this.setState({ message: "" });
   }
 
   render() {
