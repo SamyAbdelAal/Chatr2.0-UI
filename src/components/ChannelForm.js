@@ -50,7 +50,7 @@ class ChannelForm extends Component {
             onChange={this.onTextchange}
           />
         </div>
-        <input type="submit" />
+        <input className="btn" type="submit" />
       </form>
     );
   }

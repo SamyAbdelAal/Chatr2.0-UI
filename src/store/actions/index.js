@@ -12,5 +12,6 @@ export {
 export {
   fetchChannelMessages,
   postMessage,
-  filterMessages
+  filterMessages,
+  setLoading
 } from "./channelMessages";

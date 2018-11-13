@@ -2,7 +2,8 @@ import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
   messages: [],
-  filteredMessages: []
+  filteredMessages: [],
+  loading: true
 };
 
 const reducer = (state = initialState, action) => {
@@ -10,7 +11,8 @@ const reducer = (state = initialState, action) => {
     case actionTypes.FETCH_CHANNEL_MESSAGES:
       return {
         ...state,
-        messages: action.payload
+        messages: action.payload,
+        loading: false
       };
     case actionTypes.POST_MESSSAGE:
       return {
@@ -25,6 +27,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         filteredMessages: action.payload
+      };
+    case actionTypes.SET_MESSAGES_LOADING:
+      console.log(true);
+      return {
+        ...state,
+        loading: true
       };
     default:
       return state;

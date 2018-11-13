@@ -15,6 +15,8 @@ import Channels from "./components/Channels";
 import ChannelForm from "./components/ChannelForm";
 import AddChannelForm from "./components/AddChannelForm";
 
+import ChannelPage from "./components/ChannelPage";
+
 class App extends Component {
   componentDidMount() {
     this.props.fetchChannels();
@@ -26,8 +28,9 @@ class App extends Component {
         <Switch>
           <Route path="/welcome" component={Welcome} />
           <Route path="/channels/:channelID" component={Channels} />
+          <Route path="/channels" component={ChannelPage} />
           <Route path="/createChannel" component={AddChannelForm} />
-          <Route path="/channels" component={Channels} />
+          // <Route path="/channels" component={Channels} />
           <Route path="/(login|signup)" component={RegistrationForm} />
           <PrivateRoute path="/private" component={SuperSecretPage} />
           <Redirect to="/welcome" />
