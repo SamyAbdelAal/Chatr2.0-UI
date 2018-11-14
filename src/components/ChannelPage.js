@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import bg from "../images/bg.jpg";
 import SplitText from "react-pose-text";
 import Music from "./Sound";
-
 class ChannelPage extends Component {
   render() {
     const wordPoses = {
@@ -31,6 +30,7 @@ class ChannelPage extends Component {
     };
     return (
       <div className=" d-flex channel">
+        {!this.props.user && <Redirect to="/welcome" />}
         <div
           className="container text-center my-auto z-1 "
           style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}

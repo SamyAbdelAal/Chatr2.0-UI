@@ -22,6 +22,12 @@ class Welcome extends Component {
                 </Link>
               </div>
             ) : (
+              // <div>
+              //   <h1> Welcome {this.props.user.username}</h1>
+              //   <Link className="btn btn-primary" to="/channels">
+              //     Channels
+              //   </Link>
+              // </div>
               <Redirect to="/channels" />
             )}
           </div>

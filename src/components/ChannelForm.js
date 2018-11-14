@@ -26,32 +26,34 @@ class ChannelForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.submitChannel}>
-        <div className="input-group mb-3">
-          <div className="input-group-prepend">
-            <span className="input-group-text">Channel Name</span>
+      <div className="jumbotron">
+        <form onSubmit={this.submitChannel}>
+          <div className="input-group mb-3">
+            <div className="input-group-prepend">
+              <span className="input-group-text">Channel Name</span>
+            </div>
+            <input
+              type="text"
+              className="form-control"
+              name="name"
+              onChange={this.onTextchange}
+            />
           </div>
-          <input
-            type="text"
-            className="form-control"
-            name="name"
-            onChange={this.onTextchange}
-          />
-        </div>
 
-        <div className="input-group mb-3">
-          <div className="input-group-prepend">
-            <span className="input-group-text">Image URL</span>
+          <div className="input-group mb-3">
+            <div className="input-group-prepend">
+              <span className="input-group-text">Image URL</span>
+            </div>
+            <input
+              type="text"
+              className="form-control"
+              name="image_url"
+              onChange={this.onTextchange}
+            />
           </div>
-          <input
-            type="text"
-            className="form-control"
-            name="image_url"
-            onChange={this.onTextchange}
-          />
-        </div>
-        <input className="btn" type="submit" />
-      </form>
+          <input className="btn btn-success" type="submit" />
+        </form>
+      </div>
     );
   }
 }

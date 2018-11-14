@@ -69,7 +69,7 @@ class SideNav extends React.Component {
               <Shade key="shade" className="shade" />,
               <Modal key="Modal" className="shade" center>
                 <ChannelForm />
-                <button className="btn" onClick={this.onCloseModal}>
+                <button className="btn btn-warning" onClick={this.onCloseModal}>
                   close
                 </button>
               </Modal>
