@@ -166,7 +166,7 @@ body.fixed-nav {
   }
   #mainNav .navbar-collapse {
     overflow: visible;
-    max-height: none;
+    height: 5vh;
   }
   #mainNav .navbar-collapse .navbar-sidenav {
     position: absolute;
@@ -262,6 +262,8 @@ body.fixed-nav {
 @media (min-width: 992px) {
   #mainNav.fixed-top .navbar-sidenav {
     height: calc(100vh - 112px);
+    margin-top: 72px;
+    max-height: 735px;
   }
   #mainNav.fixed-top .sidenav-toggler {
     position: absolute;
@@ -274,7 +276,7 @@ body.fixed-nav {
     margin-top: calc(100vh - 56px);
   }
   #mainNav.fixed-top .sidenav-toggler > .nav-item {
-    width: 250px;
+    width: 266px;
     padding: 0;
   }
   #mainNav.fixed-top .sidenav-toggler > .nav-item > .nav-link {
@@ -324,6 +326,10 @@ body.sidenav-toggled #mainNav.fixed-top #sidenavToggler i {
   color: #f0f0f0;
 }
 
+.jumbotron {
+  background-color: rgba(255, 165, 113, 0.5);
+}
+
 img {
   cursor: zoom-in;
   display: flex;
@@ -368,7 +374,7 @@ body.sidenav-toggled #mainNav.static-top #sidenavToggler i {
 
 .content-wrapper {
   overflow-x: hidden;
-  background: #4f4241;
+  background: #af714e;
 }
 
 .welcome {
@@ -561,7 +567,7 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 }
 
 .nav {
-  background-color: #4f4241;
+  background-color: #ba551b;
 }
 
 #mainNav.navbar-light
