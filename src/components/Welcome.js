@@ -8,7 +8,7 @@ class Welcome extends Component {
       <div className=" d-flex welcome">
         <div
           className="d-flex  w-100"
-          style={{ backgroundColor: "rgba(0,0,0,0.7)" }}
+          style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
         >
           <div className="container text-center my-auto z-1">
             <h1 className="mb-1">WELCOME TO CHATR</h1>

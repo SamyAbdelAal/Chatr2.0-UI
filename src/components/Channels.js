@@ -89,7 +89,10 @@ class Channels extends Component {
         <div className="masthead d-flex chat h-100">
           <div
             className="d-flex w-100 h-100"
-            style={{ backgroundColor: "rgba(0,0,0,0.7)" }}
+            style={{
+              backgroundColor: "rgba(0,0,0,0.3)",
+              paddingBottom: "21px"
+            }}
           >
             <div
               className="container text-center my-auto z-1 my-5"
