@@ -320,10 +320,11 @@ body.sidenav-toggled #mainNav.fixed-top #sidenavToggler i {
 }
 
 .channel {
-  height: calc(99vh - (56px + 70px));
+  height: calc(100vh - (56px + 70px));
   background-image: url("/images/bg.jpg");
   background-size: cover;
   color: #f0f0f0;
+  margin-top: -6px;
 }
 
 .jumbotron {
@@ -373,21 +374,26 @@ body.sidenav-toggled #mainNav.static-top #sidenavToggler i {
 }
 
 .content-wrapper {
-  overflow-x: hidden;
+  overflow-x: visible;
   background: #af714e;
+  background-image: url("/images/chatbg.png");
+  background-size: contain;
 }
 
 .welcome {
-  background-image: url("/images/farm.png");
-  height: calc(99vh - (56px + 70px));
+  background-image: url("/images/welcome.jpeg");
+  height: calc(100vh - (56px + 70px));
   background-size: cover;
   color: #f0f0f0;
+  margin-left: -250px;
+  margin-top: -6px;
 }
 .chat {
-  background-image: url("/images/chat.jpg");
-  height: calc(99vh - (56px + 70px));
+  background-image: url("/images/chatbg.png");
+  height: calc(100vh - (56px + 70px));
   background-size: cover;
   color: #f0f0f0;
+  margin-top: -6px;
 }
 @media (min-width: 992px) {
   .content-wrapper {
