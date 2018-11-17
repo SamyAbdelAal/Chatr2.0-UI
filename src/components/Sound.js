@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import note from "../Sound/stairs.mp3";
-class Music extends React.Component {
+class Music extends Component {
   constructor(props) {
     super(props);
     this.state = { play: false };

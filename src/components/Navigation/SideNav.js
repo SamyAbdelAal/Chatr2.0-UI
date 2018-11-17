@@ -1,7 +1,6 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import AddChannelForm from "../AddChannelForm";
 // import Modal from "react-responsive-modal";
 import ChannelForm from "../ChannelForm";
 import posed, { PoseGroup } from "react-pose";
@@ -90,8 +89,8 @@ class SideNav extends React.Component {
                 >
                   {this.props.user && (
                     <span className="nav-link " onClick={this.onOpenModal}>
-                      <span className="nav-link-text mr-2">Channels</span>
                       <FontAwesomeIcon icon={faPlusCircle} />
+                      <span className="nav-link-text mr-2">Towns</span>
                     </span>
                   )}
                 </li>

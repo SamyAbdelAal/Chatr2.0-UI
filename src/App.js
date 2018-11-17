@@ -12,7 +12,6 @@ import Welcome from "./components/Welcome";
 import RegistrationForm from "./components/RegistrationForm";
 import SuperSecretPage from "./components/SuperSecretPage";
 import Channels from "./components/Channels";
-import ChannelForm from "./components/ChannelForm";
 import AddChannelForm from "./components/AddChannelForm";
 
 import ChannelPage from "./components/ChannelPage";

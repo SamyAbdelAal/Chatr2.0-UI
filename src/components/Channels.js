@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actionCreators from "../store/actions";
 import Box from "react-chat-box";
@@ -9,7 +9,7 @@ import DateTimePicker from "react-datetime-picker";
 import ZoomImg from "./ZoomImg";
 
 import AwesomeComponent from "./spinners";
-import { change, chatBox } from "../functions";
+import { change } from "../functions";
 class Channels extends Component {
   constructor(props) {
     super(props);
@@ -21,13 +21,14 @@ class Channels extends Component {
   }
   ChatBox(message) {
     let al = "left";
+
+    if (message.username == this.props.user.username) {
+      al = "right";
+    }
     let messageTime = `${message.timestamp.substring(
       0,
       10
     )} ${message.timestamp.substring(11, 16)}`;
-    if (message.username == this.props.user.username) {
-      al = "right";
-    }
     let conversation = [
       {
         message: ` ${message.username}: ${message.message} (${messageTime})`,

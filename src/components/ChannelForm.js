@@ -30,7 +30,7 @@ class ChannelForm extends Component {
         <form onSubmit={this.submitChannel}>
           <div className="input-group mb-3">
             <div className="input-group-prepend">
-              <span className="input-group-text">Channel Name</span>
+              <span className="input-group-text">Town Name</span>
             </div>
             <input
               type="text"

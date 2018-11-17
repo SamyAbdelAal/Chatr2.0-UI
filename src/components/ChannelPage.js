@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import bg from "../images/bg.jpg";
 import SplitText from "react-pose-text";
-import Music from "./Sound";
+
 class ChannelPage extends Component {
   render() {
     const wordPoses = {
@@ -37,7 +36,7 @@ class ChannelPage extends Component {
         >
           <h1>
             <SplitText wordPoses={wordPoses} charPoses={charPoses}>
-              WELCOME TO TOWNr
+              WELCOME TO TOWNiee
             </SplitText>
           </h1>
           <h1 className="mb-1" />
@@ -50,7 +49,6 @@ class ChannelPage extends Component {
                 </SplitText>
               </em>
             </h3>
-            <Music />
           </div>
         </div>
         <div className="overlay z-0" />
@@ -63,4 +61,4 @@ const mapStateToProps = state => ({
   user: state.auth.user
 });
 
-export default connect(mapStateToProps)(ChannelPage);
+export default withRouter(connect(mapStateToProps)(ChannelPage));

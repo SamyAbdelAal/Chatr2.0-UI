@@ -1,6 +1,7 @@
 html {
   position: relative;
   min-height: 100%;
+  background-color: #897372;
 }
 
 body {
@@ -375,7 +376,10 @@ body.sidenav-toggled #mainNav.static-top #sidenavToggler i {
 
 .content-wrapper {
   overflow-x: visible;
-  background: #af714e;
+  background-size: contain;
+}
+
+#root {
   background-image: url("/images/chatbg.png");
   background-size: contain;
 }

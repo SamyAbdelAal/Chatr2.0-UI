@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import Music from "./Sound";
 class Welcome extends Component {
   render() {
     return (
@@ -11,7 +10,7 @@ class Welcome extends Component {
           style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
         >
           <div className="container text-center my-auto z-1">
-            <h1 className="mb-1">WELCOME TO CHATR</h1>
+            <h1 className="mb-1">WELCOME STRANGER</h1>
             {!this.props.user ? (
               <div>
                 <h3 className="mb-5">
@@ -22,12 +21,6 @@ class Welcome extends Component {
                 </Link>
               </div>
             ) : (
-              // <div>
-              //   <h1> Welcome {this.props.user.username}</h1>
-              //   <Link className="btn btn-primary" to="/channels">
-              //     Channels
-              //   </Link>
-              // </div>
               <Redirect to="/channels" />
             )}
           </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 // Components
 import SideNav from "./SideNav";
@@ -13,7 +13,7 @@ class NavBar extends Component {
         id="mainNav"
       >
         <Link className="navbar-brand" to="/welcome">
-          Chatr2.0
+          TOWNiee
         </Link>
         <button
           className="navbar-toggler navbar-toggler-right"
@@ -35,4 +35,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);
